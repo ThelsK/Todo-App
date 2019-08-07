@@ -101,7 +101,24 @@
         </div>
 
         <script>
-        // JavaScript code comes here...
+            // Update the proper values of all the counters.
+            function updateCounters() {
+
+                // Set the total count.
+                const total = document.getElementsByClassName("todo").length
+                document.getElementById("total-count").innerText = total
+                
+                // Set the completed count.
+                const completed = document.getElementsByClassName("completed").length
+                document.getElementById("completed-count").innerText = completed
+                
+                // Set the remaining count.
+                const remaining = total - completed
+                document.getElementById("todo-count").innerText = remaing
+            }
+
+            // Update the counters.
+            updateCounters()            
         </script>
     </body>
 </html>
